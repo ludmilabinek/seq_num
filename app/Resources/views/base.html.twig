@@ -1,0 +1,15 @@
+{# app/Resources/views/base.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Numeric Sequence</title>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
+        {% form_theme form 'bootstrap_4_layout.html.twig' %}
+    </head>
+    <body>
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

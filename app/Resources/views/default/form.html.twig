@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% if error %}
+<div class="alert alert-danger">
+{{ error }}
+</div>
+{% endif %}
+
+<div class="col-sm-2">
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
+</div>
+
+{% if result %}
+	<div class="col-sm-8">
+		<table class="col-sm-4">
+		<tr><th>INPUT</th><th>OUTPUT</th></tr>
+		{% for seq in result %}
+			<tr><td>{{ seq.n }}</td><td>{{ seq.result }}</td></tr>
+		{% endfor %}
+		</table>
+	</div>
+{% endif %}
+{% endblock %}
